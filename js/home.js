@@ -7,14 +7,16 @@
 
     const dimmer = document.getElementById('modal-dimmer');
 
-    const showModal = id => {
+	const showModal = id => {
+		const dimmer = document.getElementById("modal-dimmer");
         const modal = document.getElementById(`${id}-modal`);
         if (!modal) return;
         dimmer.classList.replace('modal-dimmer-hidden', 'modal-dimmer-visible');
         modal.classList.replace('modal-hidden', 'modal-visible');
     };
 
-    const hideModal = () => {
+	const hideModal = () => {
+		const dimmer = document.getElementById("modal-dimmer");
         const modal = document.querySelector('.modal-overlay.modal-visible');
         if (!modal) return;
         dimmer.classList.replace('modal-dimmer-visible', 'modal-dimmer-hidden');
@@ -61,7 +63,8 @@
             .catch(() => {});
     };
 
-    document.addEventListener('DOMContentLoaded', () => {
+	document.addEventListener('DOMContentLoaded', () => {
+		const dimmer = document.getElementById("modal-dimmer");
         fetchIp();
         setTimeout(() => {
             dimmer.classList.replace('modal-dimmer-visible', 'modal-dimmer-hidden');
