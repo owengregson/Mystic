@@ -3,6 +3,8 @@ import getpass
 import sys
 import requests
 
+"""Simple CLI utility to create Mystic accounts via the API."""
+
 API_URL = "https://mystic.ac/api/register/"
 
 def register(username: str, password: str, token: str = "123") -> dict:
@@ -36,3 +38,4 @@ def main(argv: list[str]) -> None:
 
 if __name__ == "__main__":
     main(sys.argv[1:])
+

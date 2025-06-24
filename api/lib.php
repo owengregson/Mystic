@@ -50,3 +50,9 @@ function log_write(string $level, string $msg, array $ctx = []): void
     fwrite($fp, json_encode($log, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
     flock($fp, LOCK_UN); fclose($fp);
 }
+
+function respond(int $code, array $payload): never
+{
+    http_response_code($code);
+    exit(json_encode($payload));
+}

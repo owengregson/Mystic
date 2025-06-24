@@ -6,8 +6,7 @@ require_once dirname(__DIR__) . '/lib.php';
 
 /* ------ guard ------ */
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405);
-    exit(json_encode(['error'=>'Method Not Allowed']));
+    respond(405, ['error' => 'Method Not Allowed']);
 }
 
 /* ------ input ------ */
@@ -17,11 +16,10 @@ $msg    = trim($p['message'] ?? '');
 $ctx    = $p['context'] ?? [];
 
 if ($msg === '') {
-    http_response_code(400);
-    exit(json_encode(['error'=>'Missing message']));
+    respond(400, ['error' => 'Missing message']);
 }
 
 /* ------ write ------ */
 log_write($level, $msg, $ctx);
 
-echo json_encode(['success'=>true]);
+respond(200, ['success' => true]);
