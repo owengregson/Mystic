@@ -8,7 +8,9 @@
     <img src="./assets/images/mystic-hero.png" alt="mystic logo" width="84px" height="84px"/>
     <h1>Mystic</h1>
     <h3>A minimalist, interactive, and animated web-portal demo.</h3>
-	<a href="https://mystic.ac/"><h4>Click to visit Live Demo</h4></a>
+	<h4>
+	<a href="https://mystic.ac/">Click to visit Live Demo</a>
+	</h4>
 </div>
 
 <h2>Features</h2>
@@ -60,4 +62,3 @@
 <p>The project is intentionally minimal and up to date with current industry practices such as secure password handling and CAPTCHA verification.</p>
 </body>
 </html>
-
