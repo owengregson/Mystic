@@ -2,20 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mystic Website</title>
 </head>
 <body>
-<h1>Mystic Web Application</h1>
-<p>This repository contains the source code for the Mystic demonstration site. It is a small static front end powered by modular JavaScript and a lightweight PHP back end.</p>
+<div align="center">
+    <img src="./assets/images/mystic-hero.png" alt="mystic logo" width="84px" height="84px"/>
+    <h1>Mystic</h1>
+    <h3>A minimalist, interactive, and animated web-portal demo.</h3>
+</div>
 
 <h2>Features</h2>
 <ul>
 <li><strong>Dynamic loader</strong> – <code>loader.js</code> fetches pages from the <code>pages/</code> directory so routes remain simple and content is not duplicated.</li>
 <li><strong>Animated hero interface</strong> with snow effects and a responsive card grid.</li>
-<li><strong>Status badge</strong> embedded in the footer showing simulated node and user counts.</li>
-<li><strong>Login form</strong> protected by Cloudflare Turnstile CAPTCHA.</li>
-<li>Reusable modal system and dynamic footer.</li>
+<li><strong>Status badge</strong> embedded in the footer showing simulated node and user counts from PHP endpoints.</li>
+<li><strong>Login form</strong> protected by Cloudflare Turnstile CAPTCHA, verified both client and server-side.</li>
+<li><strong>Self destruct</strong> when the user opens DevTools to inspect page structure or execute code.</li>
+<li><strong>Reusable</strong> modal system and embedded footer.</li>
 </ul>
+
+<h2>Screenshots</h2>
+<h3>Home</h3>
+<img src="./assets/images/home-demo.png" style="width: 750px; height: auto;">
+<h3>Modal Popup</h3>
+<img src="./assets/images/modal-demo.png" style="width: 750px; height: auto;">
+<h3>Login</h3>
+<img src="./assets/images/login-demo.png" style="width: 750px; height: auto;">
 
 <h2>API Endpoints</h2>
 <p>Most endpoints are intended for back‑end consumption. They all return JSON.</p>
@@ -38,6 +49,8 @@
 
 <h2>Technology</h2>
 <ul>
+<h3>No high-level frameworks are used. <em>Made with JS, CSS, HTML, and PHP.</em></h3>
+<p><img src="https://skillicons.dev/icons?i=js,css,html,php"></p>
 <li>Modern ES modules organised into small self‑contained scripts.</li>
 <li>Responsive CSS using custom fonts and a small set of utility classes.</li>
 <li>PHP 8 code following strict types and returning structured JSON.</li>

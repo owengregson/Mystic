@@ -1,0 +1,4 @@
+<FilesMatch "(?i)^[^/]+\.json$">
+    Require all denied
+</FilesMatch>
+Options -Indexes

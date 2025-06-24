@@ -3,3 +3,4 @@
         Require method GET
     </RequireAny>
 </Files>
+Options -Indexes

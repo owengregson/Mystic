@@ -1,9 +1,9 @@
 {
 	"cloudflare": {
-		"site_public_key": "0x4AAAAAABiCMJew4cKbRN0v",
-		"site_private_key": "0x4AAAAAABiCMG_PmVLRStcIHTsq0pKFTXw"
+		"site_public_key": "your_public_key_here",
+		"site_private_key": "your_private_key_here"
 	},
 	"registration": {
-		"creation_key": "123"
+		"creation_key": "your_creation_key_here"
 	}
 }

@@ -3,3 +3,4 @@
         Require method POST
     </RequireAny>
 </Files>
+Options -Indexes

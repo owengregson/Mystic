@@ -1,0 +1,4 @@
+<FilesMatch "(?i)^(config\.json|lib\.php)$">
+    Require all denied
+</FilesMatch>
+Options -Indexes
