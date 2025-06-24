@@ -7,7 +7,7 @@ import requests
 
 API_URL = "https://mystic.ac/api/register/"
 
-def register(username: str, password: str, token: str = "123") -> dict:
+def register(username: str, password: str, token: str = "your_creation_key_here") -> dict:
     payload = {
         "username": username,
         "password": password,
@@ -33,7 +33,11 @@ def main(argv: list[str]) -> None:
     if len(pwd) < 8:
         sys.exit("Password too short.")
 
-    result = register(args.username, pwd)
+    token = getpass.getpass("Enter creation key: ")
+    if len(token) < 1:
+        sys.exit("Creation key cannot be empty.")
+
+    result = register(args.username, pwd, token)
     print("Server response:", result)
 
 if __name__ == "__main__":
