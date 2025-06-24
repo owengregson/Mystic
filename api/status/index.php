@@ -1,4 +1,5 @@
 <?php
+require_once dirname(__DIR__) . '/lib.php';
 function simulated_user_count(\DateTimeInterface $dt = null): int {
     $tz = new DateTimeZone('America/Los_Angeles');
     $dt = $dt
@@ -63,9 +64,9 @@ function simulated_node_count(\DateTimeInterface $dt = null): int {
 
 header("Access-Control-Allow-Origin: *");
 header('Content-Type: application/json');
-echo json_encode([
+respond(200, [
     'timestamp' => time(),
-    'status'    => "online",
+    'status'    => 'online',
     'nodes'     => simulated_node_count(),
     'users'     => simulated_user_count(),
 ]);

@@ -9,8 +9,7 @@ require_once dirname(__DIR__) . '/lib.php';
 function fail(int $c, string $m, array $ctx = []): never
 {
     log_write('WARNING', $m, $ctx);
-    http_response_code($c);
-    exit(json_encode(['error' => $m]));
+    respond($c, ['error' => $m]);
 }
 
 function verify_turnstile(string $token): bool
@@ -67,4 +66,4 @@ $_SESSION['user'] = $user;
 
 log_write('INFO', 'User login', ['user'=>$user,'ip'=>$_SERVER['REMOTE_ADDR']??'']);
 
-echo json_encode(['success'=>true]);
+respond(200, ['success' => true]);

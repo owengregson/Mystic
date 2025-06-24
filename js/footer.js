@@ -1,8 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-	const fc = document.getElementById("footer-copyright");
-	let it = fc.innerText;
-	fc.innerText = it.replace(
-		"{YEAR}",
-		new Date().getFullYear()
-	);
-});
+(() => {
+    document.addEventListener('DOMContentLoaded', () => {
+        const fc = document.getElementById('footer-copyright');
+        fc.innerText = fc.innerText.replace('{YEAR}', new Date().getFullYear());
+    });
+})();

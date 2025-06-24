@@ -6,8 +6,7 @@ require_once dirname(__DIR__) . '/lib.php';
 
 function fail(int $c, string $m, array $ctx = []): never {
     log_write('WARNING', $m, $ctx);
-    http_response_code($c);
-    exit(json_encode(['error'=>$m]));
+    respond($c, ['error' => $m]);
 }
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') fail(405,'Method Not Allowed');
@@ -46,4 +45,4 @@ flock($fp,LOCK_UN); fclose($fp);
 
 log_write('INFO','User registered',['user'=>$user,'ip'=>$_SERVER['REMOTE_ADDR']??'']);
 
-echo json_encode(['success'=>true]);
+respond(200, ['success' => true]);
