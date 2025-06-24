@@ -1,0 +1,40 @@
+#snow-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.snow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0 0 8px white;
+	filter: blur(0.2px);
+	transform-origin: center;
+	--x-start: 0vw;
+	--x-end: 0vw;
+	--scale: 1;
+	--opacity: 1;
+	--duration: 20s;
+	--delay: 0s;
+	opacity: var(--opacity);
+	animation: fall var(--duration) linear infinite var(--delay);
+}
+
+@keyframes fall {
+	0% {
+		transform: translate(var(--x-start), -10px) scale(var(--scale));
+	}
+	100% {
+		transform: translate(var(--x-end), 100vh) scale(var(--scale));
+	}
+}

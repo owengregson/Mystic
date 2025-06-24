@@ -1,0 +1,5 @@
+<Files "index.php">
+    <RequireAny>
+        Require method POST
+    </RequireAny>
+</Files>

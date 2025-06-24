@@ -1,0 +1,42 @@
+.badge-holder {
+	padding: 6px;
+	display: flex;
+	border-radius: 8px;
+	align-items: center;
+}
+
+.badge-holder:hover {
+	background-color: rgba(138, 145, 165, 0.3);
+	cursor: pointer;
+}
+
+.badge {
+	margin-bottom: -6px;
+}
+
+.badge-hidden {
+	display: none;
+}
+
+.status-waiting {
+	color: rgb(180, 180, 180);
+}
+
+.status-online {
+	color: rgb(16, 185, 129);
+}
+
+.status-offline {
+	color: rgb(248, 113, 113);
+}
+
+.badge-text {
+	font-size: 0.875rem;
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	padding-left: 6px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
