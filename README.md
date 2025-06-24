@@ -8,6 +8,7 @@
     <img src="./assets/images/mystic-hero.png" alt="mystic logo" width="84px" height="84px"/>
     <h1>Mystic</h1>
     <h3>A minimalist, interactive, and animated web-portal demo.</h3>
+	<a href="https://mystic.ac/"><h4>Click to visit Live Demo</h4></a>
 </div>
 
 <h2>Features</h2>
