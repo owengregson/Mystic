@@ -5,8 +5,7 @@
 </head>
 <body>
 <div align="center">
-    <img src="./assets/images/mystic-hero.png" alt="mystic logo" width="84px" height="84px"/>
-    <h1>Mystic</h1>
+    <img src="./assets/images/mystic-logo.png" alt="mystic logo" width="214px" height="72px"/>
     <h3>A minimalist, interactive, and animated web-portal demo.</h3>
 	<h4>
 	<a href="https://mystic.ac/">Click to visit Live Demo</a>
